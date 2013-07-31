@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+		
+		<script src=”//code.jquery.com/jquery-1.7.2.js”></script>
+		
+		
+		<title>Thinking of You!</title>
+		<style media="screen" type="text/css">
+		
+		body {
+			width: device-width;
+			background: #FFF;
+		}
+
+		#container {
+			margin-top: 7px;
+			width: 100%;
+		}
+		
+		#border {
+			width: 95%;
+			margin: 0px auto;
+			overflow: hidden;
+			border: 6px solid black;
+			-moz-border-radius: 15px;
+			-webkit-border-radius: 15px;
+			-opera-border-radius: 15px;
+			-khtml-border-radius: 15px;
+			border-radius: 15px;
+			background: #FFFFF0;
+		}
+		
+		#header {
+			width: 100%;
+			margin: 0px auto;
+			text-align: center;
+			color: #2554c7; 
+			font-size: 5em;
+		}
+		
+		#form {
+			width: 100%;
+			margin: 0px auto;
+			text-align: center;
+			background: #1589FF;
+			color: black;
+			font-size: 3em;
+			outline: black solid medium;
+		}			
+		</style>
+	
+	</head>
+<body>    
+    
+	<div id="container">
+	<div id="border">
+			
+ 	<div id="header">
+   	<em><font face="Georgia">Thinking of You</font></em>
+   	</div>
+        
+    <div id="form">      
+	<br/>
+    <form action="/" method="get">
+    	<hl><font face="Georgia"> You Made It! </font></hl>
+    	<br/>
+        <input type="submit" value="Back to Messages">
+    </form>
+    <br/>
+    </div>
+    
+    </div>
+    </div>
+        
+</body>
+
+	
+	<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-42471940-2', 'aps-thinkingofyou.appspot.com');
+  		ga('send', 'pageview');
+
+
+
+		var formSubmit = document.getElementById('form');
+		addListener(formSubmit, 'submit', function() {
+  			ga('send', 'event', 'Funnel to Home', 'submit');
+		});
+
+
+/**
+ * Utility to wrap the different behaviors between W3C-compliant browsers
+ * and IE when adding event handlers.
+ *
+ * @param {Object} element Object on which to attach the event listener.
+ * @param {string} type A string representing the event type to listen for
+ *     (e.g. load, click, etc.).
+ * @param {function()} callback The function that receives the notification.
+ */
+				
+		function addListener(element, type, callback) {
+ 			if (element.addEventListener) element.addEventListener(type, callback);
+ 			else if (element.attachEvent) element.attachEvent('on' + type, callback);
+			}	
+
+	</script>
+
+
+
+
+</html>
+{% endautoescape %}
+
+
+
+
+
+
+
